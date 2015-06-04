@@ -17,11 +17,12 @@ Vagrant.configure(2) do |config|
     c.vm.network "forwarded_port", guest: 2375, host: 2375
 
     # See https://github.com/chiastolite/vagrant-itamae
-    c.vm.provision "itamae" do |itamae|
-      itamae.sudo = true
+    # uncomment if you noy use itamae --vagramt
+    # c.vm.provision "itamae" do |itamae|
+    #   itamae.sudo = true
 
-      itamae.recipes = ['./recipe.rb']
-      itamae.json    = './node.json'
-    end
+    #   itamae.recipes = ['./recipe.rb']
+    #   itamae.json    = './node.json'
+    # end
   end
 end
