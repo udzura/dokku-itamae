@@ -25,7 +25,7 @@ end
 
 git "/var/lib/dokku/plugins/redis" do
   repository "https://github.com/luxifer/dokku-redis-plugin"
-  notify "execute[dokku plugins-install]"
+  notifies :run, "execute[dokku plugins-install]"
 end
 
 execute "dokku plugins-install" do
